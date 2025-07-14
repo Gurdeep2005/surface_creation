@@ -14,8 +14,8 @@ typedef Kernel::Point_3 Point;
 int main(int argc, char* argv[])
 {
     // Set your filename here or pass it as argument
-    const std::string fname = (argc > 1) ? argv[1] : "/home/gurdeep/Desktop/soot_tomography/output/model2.xyz";
-    //const std::string fname = (argc > 1) ? argv[1] : "/home/gurdeep/Desktop/soot_tomography/output/simplified_points.xyz";
+    //const std::string fname = (argc > 1) ? argv[1] : "/home/gurdeep/Desktop/soot_tomography/output/model2.xyz";
+    const std::string fname = (argc > 1) ? argv[1] : "/home/gurdeep/Desktop/soot_tomography/output/simplified_points.xyz";
     std::vector<Point> points;
 
     // Read points from file

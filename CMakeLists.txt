@@ -34,6 +34,11 @@ target_compile_definitions(reconstruction PRIVATE CGAL_EIGEN3_ENABLED)
 target_compile_features(reconstruction PRIVATE cxx_std_14)
 
 # === Executable: smoothing ===
-#add_executable(smoothing smoothing.cpp)
-#target_link_libraries(smoothing CGAL::CGAL CGAL::CGAL_Core)
-#target_compile_features(smoothing PRIVATE cxx_std_14)
+add_executable(smoothing smoothing.cpp)
+target_link_libraries(smoothing CGAL::CGAL CGAL::CGAL_Core)
+target_compile_features(smoothing PRIVATE cxx_std_14)
+
+# === Executable: shrink_wrap ===
+add_executable(shrink_wrap shrink_wrap.cpp)
+target_link_libraries(shrink_wrap CGAL::CGAL CGAL::CGAL_Core)
+target_compile_features(shrink_wrap PRIVATE cxx_std_14)
