@@ -20,8 +20,9 @@ typedef CGAL::Parallel_if_available_tag Concurrency_tag;
 
 int main(int argc, char* argv[])
 {
-  const std::string input_filename  = (argc > 1) ? argv[1] : "/home/gurdeep/Desktop/soot_tomography/output/simplified_points.xyz";
-  const std::string output_filename = (argc > 2) ? argv[2] : "/home/gurdeep/Desktop/soot_tomography/output/points_with_normals.xyz";
+ // const std::string input_filename  = (argc > 1) ? argv[1] : "/home/gurdeep/Desktop/soot_tomography/output/simplified_points.xyz";
+    const std::string input_filename  = (argc > 1) ? argv[1] : "/home/gurdeep/Desktop/soot_tomography/output/filtered_points.xyz";
+    const std::string output_filename = (argc > 2) ? argv[2] : "/home/gurdeep/Desktop/soot_tomography/output/points_with_normals.xyz";
 
   // Read input points
   std::vector<PointVectorPair> points;

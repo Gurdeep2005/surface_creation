@@ -13,6 +13,7 @@ typedef Kernel::Point_3 Point;
 int main()
 {
   const std::string input_filename = "/home/gurdeep/Desktop/soot_tomography/output/filtered_points.xyz";
+ // const std::string input_filename = "/home/gurdeep/Desktop/soot_tomography/output/simplified_points.xyz";
 
   // Read input points
   std::vector<Point> points;
@@ -26,7 +27,7 @@ int main()
 
   // Compute average spacing for grid cell size
   double spacing = CGAL::compute_average_spacing<CGAL::Sequential_tag>(points, 6);
-  double cell_size = spacing * 1.5;
+  double cell_size = spacing * 1.2;
   unsigned int min_points_per_cell = 3;
 
   std::cout << "Computed average spacing: " << spacing << std::endl;
@@ -43,7 +44,7 @@ int main()
   std::cout << "Remaining points after simplification: " << points.size() << "\n";
 
   // Save result
-  const std::string output_filename = "simplified_points.xyz";
+  const std::string output_filename = "/home/gurdeep/Desktop/soot_tomography/output/simplified_points.xyz";
   if (!CGAL::IO::write_points(output_filename, points,
         CGAL::parameters::stream_precision(6)))
   {
